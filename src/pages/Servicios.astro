@@ -1,11 +1,26 @@
 ---
+import Container from '@components/container.astro';
 import Layout from '../layouts/Layout.astro';
+import Producto from '../components/Producto.astro';
+import Reparto from '../components/Reparto.astro';
+import Almacenaje from '../components/Almacenaje.astro';
 
 ---
 
 <Layout title="Ruiz Logistics SL | Servicios">
-	<main>
-	</main>
+	<Container>
+		<div class="grid md:grid-cols-3 gap-7 mx-auto max-w-4xl mt-16">
+			<div>
+				<Almacenaje />
+			</div>
+			<div>
+				<Producto />
+			</div>
+			<div>
+				<Reparto />
+			</div>
+		</div>
+	</Container>
 </Layout>
 
 <style>

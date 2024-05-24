@@ -14,14 +14,14 @@ import Button from "./ui/button.astro";
     name="access_key"
     value="d2c45b2d-831d-4883-af77-266774ab9010"
   />
-  <!-- Create your free access key from https://web3forms.com/ -->
+  
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
     <input
       type="text"
       placeholder="Nombre Completo"
       required
-      class="w-full px-4 py-3 border-2 bg-white dark:placeholder:text-white placeholder:text-black dark:bg-[#1e293b] rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 bg-white dark:text-white dark:placeholder:text-white placeholder:text-black dark:bg-[#1e293b] rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
       name="name"
     />
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -35,7 +35,7 @@ import Button from "./ui/button.astro";
       placeholder="Correo Electronico"
       name="email"
       required
-      class="w-full px-4 py-3 border-2  placeholder:text-black dark:placeholder:text-white rounded-md bg-white dark:bg-[#1e293b] outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 dark:text-white placeholder:text-black dark:placeholder:text-white rounded-md bg-white dark:bg-[#1e293b] outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     />
     <div class="empty-feedback text-red-400 text-sm mt-1">
       Porfavor, ingrese un correo electronico valido.
@@ -49,7 +49,7 @@ import Button from "./ui/button.astro";
       name="message"
       required
       placeholder="Escribe tu mensaje aqui..."
-      class="w-full px-4 py-3 border-2 bg-white placeholder:text-black dark:placeholder:text-white dark:bg-[#1e293b] rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      class="w-full px-4 py-3 border-2 bg-white dark:text-white placeholder:text-black dark:placeholder:text-white dark:bg-[#1e293b] rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     ></textarea>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
       Porfavor, ingrese un mensaje.
