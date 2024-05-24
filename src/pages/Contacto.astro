@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/container.astro';
+import Formulario from '../components/Formulario.astro';
+import Contactohead from '../components/Contactohead.astro';
+import Mapa from '../components/icons/Mapa.astro';
+import Mail from '../components/icons/Mail.astro';
+import Phone from '../components/icons/Phone.astro';
+
+
+---
+
+<Layout title="Ruiz Logistics SL | Inicio">
+	<Container>
+		<Contactohead>
+			<Fragment slot="title">Contactanos</Fragment>
+      <Fragment slot="desc">Podemos ayudarte con tus problemas logisticos.</Fragment>
+		</Contactohead>
+		<div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-black dark:text-white">Contacto Ruiz Logistics SL</h2>
+        <p class="text-lg leading-relaxed text-black dark:text-slate-300 mt-3">
+          ¿Tienes alguna duda? Nosotros podemos ayudarte. Completa el formulario o mandanos un E-mail. Y nos pondremos en contacto contigo.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-black dark:text-gray-300">
+            <p class="text-gray-300 "  />
+            <Mapa />
+            <span>
+              
+              <a
+              href="https://maps.app.goo.gl/PyoiX9XMDpcvhPsx5"
+              >Poligono Picassent, Valencia, Spain</a>
+            </span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2  text-black dark:text-gray-300">
+            
+            <p class="text-gray-400 "  />
+            <Mail /><a
+              href="mailto:byalex20@gmail.com"
+              >RuizLogisticsSL@gmail.com</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2  text-black dark:text-gray-300">
+            <p class="text-gray-400 "  />
+            <Phone />
+            <a
+              href="tel:+34 674 35 77 85">+34 674 35 77 85</a
+            >
+          </div>
+        </div>
+      </div>
+		<div>
+		<Formulario />
+  	</div>
+</Container>
+</Layout>
+
+
