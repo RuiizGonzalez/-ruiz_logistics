@@ -2,7 +2,8 @@ import { useCallback, useEffect, useState } from 'preact/hooks'
 
 export const useProgressiveNumber = (
 	initialValue: number | (() => number),
-	duration = 4000,
+	duration = 2000,
+  decimals =0,
 	delay = 50
 ): [number, (value: number | ((prevTarget: number) => number)) => void] => {
 	const [target, setTarget] = useState(initialValue)
@@ -42,5 +43,7 @@ export const useProgressiveNumber = (
 		return () => clearInterval(interval)
 	}, [delay, step, target])
 
-	return [current, setValue]
+  const value = Number(current.toFixed(decimals))
+
+	return [value, setValue]
 }

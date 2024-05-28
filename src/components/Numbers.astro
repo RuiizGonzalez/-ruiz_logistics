@@ -4,9 +4,9 @@ import {CountUp} from "../components/CountUp";
 
 <div class="grid md:grid-cols-3 gap-7 mx-auto max-w-4xl mt-16">
 <div class=" pr-6">
-  <p class="text-center text-orange-500 text-7xl font-bold tabular-nums tracking-tighter">
+  <p class=" text-center text-orange-500 text-7xl font-bold tabular-nums tracking-tighter">
     <span>
-      <CountUp client:visible initial={0} final={1.25}/>M
+      <CountUp client:visible initial={0} final={1.25} decimals={2} />M
     </span>
   </p>
   <p class="text-center ">Paquetes repartidos</p>
@@ -14,7 +14,7 @@ import {CountUp} from "../components/CountUp";
 <div>
   <p class="text-center text-orange-500 text-7xl font-bold tabular-nums tracking-tighter">
     <span>
-      <CountUp client:visible initial={0} final={350}/>K
+      <CountUp client:visible initial={0} final={350} decimals={0}/>K
     </span>
   </p>
   <p class="text-center">Pedidos gestionados</p>
@@ -22,10 +22,11 @@ import {CountUp} from "../components/CountUp";
 <div>
   <p class="text-center text-orange-500 text-7xl font-bold tabular-nums tracking-tighter">
     <span>
-      <CountUp client:visible initial={0} final={15.3}/>K
+      <CountUp client:visible initial={0} final={15.3} decimals={1}/>K
     </span>
   </p>
   <p class="text-center">Clientes Satisfechos</p>
 </div>
 
 </div>
+
