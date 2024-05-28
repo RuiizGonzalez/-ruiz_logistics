@@ -1,24 +1,22 @@
 ---
-import Claro from "./icons/Claro.astro"
-import Oscuro from "./icons/Oscuro.astro"
+import Tema from "./icons/Tema.astro"
 
-const THEMES = ["Light", "Dark"]
+const THEMES = ["light", "dark"]
 ---
 
 <div class="relative ml-1 mr-1 text-black dark:text-white">
   <button
+    transition:persist
     id="theme-toggle-btn"
     class="appearance-none border-none flex hover:scale-125 transition"
   >
     <span class="sr-only">Elige el tema</span>
-    <Claro id="Light" class="theme-toggle-icon size-5 transition-all" />
-    <Oscuro
-      id="Dark"
-      class="theme-toggle-icon absolute size-5 transition-all"
-    />
+    <Tema id="light" class=" theme-toggle-icon  size-5 transition-all" />
+    
     
   </button>
   <div
+    transition:persist
     id="themes-menu"
     class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
   >
@@ -63,14 +61,14 @@ const THEMES = ["Light", "Dark"]
       return localStorage.getItem("theme") ?? "system"
     }
 
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "Dark"
-      : "Light"
+    return window.matchMedia("(prefers-color-scheme: light)").matches
+      ? "dark"
+      : "light"
   }
 
   const updateIcon = (themePreference) => {
     document.querySelectorAll(".theme-toggle-icon").forEach((element) => {
-      element.style.scale = element.id === themePreference ? "1" : "0"
+      element.style.scale = element.id === themePreference ? "dark" : "light"
     })
   }
 
@@ -108,6 +106,8 @@ const THEMES = ["Light", "Dark"]
       updateTheme()
     })
   })
-
-
+  document.addEventListener('astro:after-swap', () => {
+    updateTheme();
+    window.scrollTo({ left: 0, top: 0, behavior: 'instant' });
+  })
 </script>
