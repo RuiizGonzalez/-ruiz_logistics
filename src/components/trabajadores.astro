@@ -1,0 +1,53 @@
+---
+import Jefet from '../components/Jefet.astro'
+import Jefef from './Jefef.astro'
+import Jefem from './Jefem.astro'
+import Recursoshumanosla from './Recursoshumanosla.astro'
+import Recursoshumanosan from './Recursoshumanosan.astro'
+---
+<div class="grid md:grid-cols-2 gap-7 mx-auto max-w-4xl mt-16">
+  <div class="">
+  <h1 class="text-center text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white" > Jefe de tráfico</h1>
+  <p class="py-10 text-center"> Responsable de los conductores que estan en carretera, se encarga de organizar las rutas y ayudar a los repartidores con los posible problemas que tengas durante su dia de reparto.
+  </p>
+  </div>
+  <div>
+  <Jefet />
+  </div>
+</div>
+
+<div class="grid md:grid-cols-2 gap-7 mx-auto max-w-4xl mt-16">
+  <div class="">
+    <h1 class="text-center text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white" > Jefe de flota</h1>
+    <p class="py-10 text-center">   Responsable de los vehiculos de la empresa, se encarga de la logistica de los vehiculos, mantenimiento y reparacion de los mismos.
+    </p>
+  </div>
+  <div>
+    <Jefef />
+  </div>
+</div>
+<div class="grid md:grid-cols-2 gap-7 mx-auto max-w-4xl mt-16">
+  <div class="">
+    <h1 class="text-center text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white" > Jefe de almacén</h1>
+    <p class="py-10 text-center"> Responsable de la logistica de los productos, se encarga de la entrada y salida de los productos, control de stock y organizacion del almacen.
+    </p>
+  </div>
+  <div>
+    <Jefem />
+  </div>
+</div>
+<div class="grid md:grid-cols-3 gap-7 mx-auto max-w-4xl mt-16">
+  <div class="">
+    <h1 class="text-center text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white" > Recursos Humanos</h1>
+    <p class="py-10 text-center"> Responsable de la contratacion de personal, se encarga de la seleccion de personal, entrevistas y contratacion de personal.
+    </p>
+  </div>
+  <div>
+    <Recursoshumanosla />
+  </div>
+  <div>
+    <Recursoshumanosan />
+  </div>
+</div>
+
+</div>

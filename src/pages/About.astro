@@ -1,10 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Trabajadores from '../components/trabajadores.astro';
 
 ---
 
 <Layout title="Ruiz Logistics SL | Sobre nosotros">
-	
+<div class="py-24 mb-4 text-center text-4xl font-extrabold tracking-tight md:text-5xl xl:text-6xl dark:text-white"> 
+  NUESTRO EQUIPO DE TRABAJO
+  <p class="py-4 mb-4 text-center text-1xl font-extrabold tracking-tight md:text-2xl xl:text-2xl dark:text-white">Estos son los profesionales que trabajan con nosotros</p>
+</div>
+<div>
+  <Trabajadores />
+</div>
+  
 </Layout>
 
 <style>
